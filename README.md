@@ -78,6 +78,11 @@ export class TaskController {
 }
 ```
 
+### 10. Creo controlador para Módulo Auth sin archivo test:
+
+```
+nest g controller auth --no-spec
+```
 
 
 
