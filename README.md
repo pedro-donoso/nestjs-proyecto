@@ -26,4 +26,4 @@ npm run start:dev
 
 ### 5. Configuro proyecto:
 
-* Elimino app.controller.ts y app.service.ts
+* Elimino app.controller.ts y app.service.ts, solo dejo app.module.ts
