@@ -2,11 +2,10 @@ import { Module } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { join } from 'path';
-import { NestExpressApplication } from '@nestjs/platform-express';
-import { serveStatic } from 'serve-static';
+import * as serveStatic from 'serve-static'; // Cambia aquí
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  const app = await NestFactory.create(AppModule);
 
   // Servir archivos estáticos desde el directorio 'public'
   app.use(serveStatic(join(__dirname, '..', 'public')));
