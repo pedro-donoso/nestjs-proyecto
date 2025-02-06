@@ -7,4 +7,10 @@ export class TaskController {
    getAllTasks(){
         return 'Obteniendo todas las tareas'
    }
+
+   @Get('/')
+   index(){
+        return 'Página inicial'
+   }
+
 }
