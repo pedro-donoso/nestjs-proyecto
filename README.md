@@ -45,29 +45,15 @@ rules: {
 
 ```
 
-### 7. Creo Módulo:
-
-* En src creo carpeta tasks con archivo tasks.module.ts
+### 7. Creo Módulo projects:
 
 ```
-import { Module } from '@nestjs/common';
-
-@Module({})
-export class TaskModule {}
+nest g module projects
 ```
 
 ### 8. Importo Módulo:
 
 * En app.module.ts
 
-```
-import { Module } from '@nestjs/common';
-import { TaskModule } from './tasks/tasks.module';
-
-@Module({
-  imports: [TaskModule],
-})
-export class AppModule {}
-```
 
 
