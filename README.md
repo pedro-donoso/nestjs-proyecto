@@ -23,3 +23,7 @@ nest new myfirstapp
 ```
 npm run start:dev
 ```
+
+### 5. Configuro proyecto:
+
+* Elimino app.controller.ts y app.service.ts
