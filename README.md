@@ -131,6 +131,26 @@ export class UsersService {
 }
 ```
 
+### 11. Creo controller users:
+
+```
+import { Controller, Get } from '@nestjs/common';
+import { UsersService } from './users.service';
+
+@Controller()
+export class UsersController {
+
+    constructor(private usersService: UsersService) {}
+
+    @Get()
+    getUsers() {
+        this.usersService.getUsers();
+    }
+
+}
+```
+
+
 
 
 
