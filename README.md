@@ -51,9 +51,40 @@ rules: {
 nest g module projects
 ```
 
-### 8. Importo Módulo:
+### 8. Creo Controller en tasks:
 
-* En app.module.ts
+```
+nest g controller tasks
+```
+
+### 9. Agrego rutas en tasks.controller.ts:
+
+```
+import { Controller, Get } from "@nestjs/common";
+
+@Controller({})
+export class TaskController {
+
+   @Get('/tasks')
+   getAllTasks(){
+        return 'Obteniendo todas las tareas'
+   }
+
+   @Get('/')
+   index(){
+        return 'Página inicial'
+   }
+
+}
+```
+
+
+
+
+
+
+
+
 
 
 
