@@ -142,9 +142,9 @@ export class UsersController {
 
     constructor(private usersService: UsersService) {}
 
-    @Get()
+    @Get('/users')
     getUsers() {
-        this.usersService.getUsers();
+        return this.usersService.getUsers();
     }
 
 }
