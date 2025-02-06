@@ -48,7 +48,7 @@ rules: {
 ### 7. Creo Módulo auth:
 
 ```
-nest g module projects
+nest g module auth
 ```
 
 ### 8. Creo Controller en tasks:
