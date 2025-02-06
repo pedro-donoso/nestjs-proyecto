@@ -45,7 +45,7 @@ rules: {
 
 ```
 
-### 7. Creo Módulo projects:
+### 7. Creo Módulo auth:
 
 ```
 nest g module projects
