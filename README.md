@@ -44,47 +44,69 @@ rules: {
     ]
 
 ```
-
-### 7. Creo Módulo auth:
-
-```
-nest g module auth
-```
-
-### 8. Creo Controller en tasks:
+### 7. Creo service:
 
 ```
-nest g controller tasks
+nest g service tasks
 ```
 
-### 9. Agrego rutas en tasks.controller.ts:
+```
+import { Injectable } from "@nestjs/common";
+
+@Injectable()
+export class TasksService {
+
+    getTasks() {
+        return ['Task 1', 'Task 2', 'Task 3']
+    }
+
+}
+```
+
+### 8. Creo Controller en tasks sin archivo test:
+
+```
+nest g controller tasks --no-spec
+```
 
 ```
 import { Controller, Get } from "@nestjs/common";
+import { TasksService } from './tasks.service';
+
 
 @Controller({})
 export class TaskController {
+    tasksService:TasksService;
+
+    constructor(tasksService:TasksService) {
+        this.tasksService = tasksService;
+    }
 
    @Get('/tasks')
    getAllTasks(){
-        return 'Obteniendo todas las tareas'
-   }
-
-   @Get('/')
-   index(){
-        return 'Página inicial'
+    return this.tasksService.getTasks();
    }
 
 }
 ```
 
-### 10. Creo controlador para Módulo Auth sin archivo test:
+### 9. Creo Módulo tasks:
 
 ```
-nest g controller auth --no-spec
+nest g module tasks
 ```
 
+```
+import { Module } from '@nestjs/common';
+import { TaskController } from './tasks.controller';
+import { TasksService } from './tasks.service';
 
+@Module({
+    controllers: [TaskController],
+    providers: [TasksService]
+})
+export class TaskModule {}
+```
 
 
 
