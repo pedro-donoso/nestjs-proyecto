@@ -21,5 +21,5 @@ nest new myfirstapp
 ### 4. Corro app:
 
 ```
-npm start
+npm run start:dev
 ```
