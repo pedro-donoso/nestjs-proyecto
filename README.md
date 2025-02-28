@@ -177,7 +177,11 @@ export class UsersController {
 }
 ```
 
+### 12. Corro proyecto:
 
+```
+npm run start:dev
+```
 
 
 
