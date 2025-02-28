@@ -157,6 +157,10 @@ export class UsersService {
 ### 11. Creo controller users:
 
 ```
+nest g controller users --no-spec
+```
+
+```
 import { Controller, Get } from '@nestjs/common';
 import { UsersService } from './users.service';
 
