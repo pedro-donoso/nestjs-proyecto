@@ -177,7 +177,25 @@ export class UsersController {
 }
 ```
 
-### 12. Corro proyecto:
+### 12. Configuro app.module.ts
+
+```
+import { Module } from '@nestjs/common';
+import { TaskModule } from './tasks/tasks.module';
+import { TaskController } from './tasks/tasks.controller';
+import { UsersController } from './users/users.controller';
+import { TasksService } from './tasks/tasks.service';
+import { UsersService } from './users/users.service';
+
+@Module({
+  imports: [TaskModule],
+  controllers: [TaskController, UsersController],
+  providers: [TasksService, UsersService],
+})
+export class AppModule {}
+```
+
+### 13. Corro proyecto:
 
 ```
 npm run start:dev
