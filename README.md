@@ -28,7 +28,7 @@ npm run start:dev
 
 * Elimino app.controller.ts y app.service.ts, solo dejo app.module.ts
 
-### 6. Agrego Prettier, debajo de rules:
+### 6. En eslint.config.mjs Agrego Prettier, debajo de rules:
 
 ```
 rules: {
