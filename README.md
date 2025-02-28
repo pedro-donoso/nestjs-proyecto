@@ -127,6 +127,10 @@ export class TaskModule {}
 ### 10. Creo service users:
 
 ```
+nest g service users
+```
+
+```
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
